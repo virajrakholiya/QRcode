@@ -20,9 +20,10 @@ function App() {
 
     try {
       const res = await axios.post("http://localhost:3000/", { url });
-      setQrCode(res.data.qrCode);
+      setQrCode(res.data.data);
+      console.log(res);
       
-      console.log("QR Code data:", res.data.qrCode);
+      console.log("QR Code data:", res.data.data);
       
     } catch (error) {
       setError(error.message);
