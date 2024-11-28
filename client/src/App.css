@@ -1,0 +1,153 @@
+:root {
+  --bg-color: #0a0a0a;
+  --card-bg: #111111;
+  --accent: #00ff9d;
+  --text: #ffffff;
+  --text-secondary: #888888;
+  --border: #2a2a2a;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text);
+  margin: 0;
+  padding: 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--card-bg);
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 40px rgba(0, 255, 157, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  background: var(--bg-color);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 1rem;
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 10px rgba(0, 255, 157, 0.2);
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+button:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.loading {
+  text-align: center;
+  color: #666;
+  margin: 1rem 0;
+}
+
+.error {
+  color: #dc3545;
+  text-align: center;
+  padding: 0.75rem;
+  margin: 1rem 0;
+  background: #ffe6e6;
+  border-radius: 5px;
+}
+
+.qr-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.qr-container img {
+  max-width: 200px;
+  padding: 1rem;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+img {
+  max-width: 200px;
+  margin: 20px 0;
+  display: block;
+}
